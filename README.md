@@ -114,7 +114,7 @@ Runs all three models on the same train/test split and prints comparison tables 
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn
@@ -128,19 +128,15 @@ python comparision.py
 
 ---
 
-##  Results & Model Performance
+## Results & Model Performance
 
-> Run `comparision.py` to generate the latest metrics — paste the output here.
+| Model | RMSE | MAE | R² |
+|---|---:|---:|---:|
+| Linear Regression | 6,672,536.59 | 6,209,800.93 | 0.3010 |
+| Polynomial Regression | 6,389,994.54 | 5,967,471.52 | 0.3590 |
+| Multivariate Regression | 8,287,141.31 | 8,051,538.59 | -0.0782 |
 
-| Model | MSE | RMSE | MAE | R² |
-|---|---:|---:|---:|---:|
-| Linear Regression |  |  |  |  |
-| Polynomial Regression |  |  |  |  |
-| Multivariate Regression |  |  |  |  |
-
-**Best performing model:** _(update after running `comparision.py`)_
-
----
+**Best performing model:** Polynomial Regression (highest R² = 0.3590, lowest RMSE & MAE among all three models)
 
 ### Linear Regression – Actual vs Predicted
 ![graph1](image.png)
