@@ -149,32 +149,36 @@ print("└──────────┴────────────�
 
 
 # ============================================================
-# GRAPH
+# GRAPH (FIXED - poora curve dikhane ke liye)
 # ============================================================
 
 plt.figure(figsize=(10, 6))
 
+# Actual test points (scatter)
 plt.scatter(
     test["Year"],
     y_test,
-    label="Actual Production"
+    label="Actual Production",
+    color="blue"
 )
 
+# Smooth curve — poore Year range ke liye (1961 se 2024 tak)
+year_range = pd.DataFrame({
+    "Year": np.linspace(df["Year"].min(), df["Year"].max(), 300)
+})
+smooth_pred = model.predict(year_range)
+
 plt.plot(
-    test["Year"],
-    prediction,
-    label="Polynomial Prediction"
+    year_range["Year"],
+    smooth_pred,
+    label="Polynomial Curve (full range)",
+    color="red"
 )
 
 plt.xlabel("Year")
 plt.ylabel("Production")
-
-plt.title(
-    "Polynomial Regression - Wheat Production"
-)
-
+plt.title("Polynomial Regression - Wheat Production")
 plt.legend()
 plt.grid(True, alpha=0.3)
-
 plt.tight_layout()
 plt.show()

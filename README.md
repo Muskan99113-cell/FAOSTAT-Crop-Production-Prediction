@@ -128,7 +128,8 @@ python comparision.py
 
 ---
 
-## Results & Model Performance
+##  Results & Model Performance
+
 
 | Model | RMSE | MAE | R² |
 |---|---:|---:|---:|
@@ -138,11 +139,13 @@ python comparision.py
 
 **Best performing model:** Polynomial Regression (highest R² = 0.3590, lowest RMSE & MAE among all three models)
 
+---
+
 ### Linear Regression – Actual vs Predicted
 ![graph1](image.png)
 
 ### Polynomial Regression – Actual vs Predicted
-![graph2](image-1.png)
+![graph2](!(image-1.png))
 
 ### Multivariate Regression – Actual vs Predicted
 ![graph3](image-2.png)
