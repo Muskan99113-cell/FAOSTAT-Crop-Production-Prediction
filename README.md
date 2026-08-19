@@ -145,7 +145,7 @@ python comparision.py
 ![graph1](image.png)
 
 ### Polynomial Regression – Actual vs Predicted
-![graph2](!(image-1.png))
+![graph2]((image-1.png))
 
 ### Multivariate Regression – Actual vs Predicted
 ![graph3](image-2.png)
